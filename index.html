@@ -5,42 +5,64 @@
   <meta charset="utf-8">
   <title>Favorite Movies</title>
   <style type="text/css">
+  .container {
+    background-image: url("images/grain.gif"), url("images/clap.jpg");
+    background-blend-mode: multiply, screen; 
+    background-repeat: round;
+    background-attachment: fixed;
+    background-size: contain;
+  }
     button,
     div,
     form,
     input {
       margin: 10px;
+      text-shadow: 3px 3px 3px red;
+      
+      
     }
     body{
-      background-image: url("http://www.pptbackgrounds.org/uploads/film-movies-movie-making-minimalism-creative-backgrounds-wallpapers.jpg"); 
-      background-repeat: repeat-y;
+      background-image: url("images/grain.gif");
+      /* background-blend-mode: multiply, screen;  */
+      background-repeat: no-repeat;
       background-size: cover;
-      background-position: auto;
-      background-attachment: fixed;
+      /* background-attachment: static; */
       color:yellow;
       text-shadow: 2px 2px red;
-      font-family: cursive, sans-serif;
+      font-family: cursive;
 
       
     }
     button{
       background: url("https://i.gifer.com/1A80.gif");
       color: yellow;
+      font-size: 150%;
     }
 
     #add-movie{
       background: url("https://i.gifer.com/1A80.gif");
       color: yellow;
+      font-size: 150%;
+      text-shadow: 2px 2px red;
 
     }
     #movie-input{
-      background: lightsalmon;
+      background: rgba(245, 35, 28, 0.315);
+      font-size: 150%;
+      color: yellow
       
       
     }
     #bananas{
       position: relative; 
     }
+    p {
+      background: url("images/clap.jpg");
+      background: contain;
+      background: no-repeat;
+    }
+    
+
       
     
 
@@ -62,12 +84,13 @@
     <div id="buttons-view"></div>
 
     <form id="movie-form">
-      <label for="movie-input">Add a Movie Here ➪</label>
+      <a><button id="add-movie" type="image" src="https://i.gifer.com/1A80.gif" width="20%" height="20%">Add a Movie Here ➪</button></a>
       <input type="text" id="movie-input">
-      <br>
+    
+      
 
       <!-- Button triggers new movie to be added -->
-      <input id="add-movie" type="submit" value="Add a Movie">
+      <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
     </form>
 
     <!-- Movies will Get Dumped Here -->
