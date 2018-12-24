@@ -12,11 +12,34 @@
     background-repeat: round;
     background-attachment: fixed;
     background-size: contain;
+    font-size: 25px;
   }
   h1 {
     font-style:oblique;
-    font-size: 80px;
+    font-size: 60px;
+    background: url("images/marquee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: auto;
+    width: 700px;
+    height: 100px;
+    color: black;
+    text-shadow: 3px 3px 3px yellow;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
   }
+  @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px tomato, 0 0 40px tomato, 0 0 50px tomato, 0 0 60px tomato, 0 0 70px tomato, 0 0 80px tomato;
+  }
+}
     button,
     div,
     form,
@@ -34,23 +57,26 @@
       background-size: cover;
       /* background-attachment: static; */
       color:yellow;
-      text-shadow: 2px 2px red;
+      text-shadow: 2px 2px tomato;
       font-family: 'Limelight', cursive;
 
       
     }
     button{
-      background: url("https://i.gifer.com/1A80.gif");
-      color: yellow;
+      background: url("images/copper.jpg");
+      background-size: contain;
+      color: rgb(10, 10, 10);
+      text-shadow: 2px 2px 3px yellow;
       font-size: 250%;
     }
 
     #add-movie{
-      background: url("https://i.gifer.com/1A80.gif");
-      color: yellow;
+      background: url("images/copper.jpg");
+      background-size: contain;
+      color: black;
+      text-shadow: 3px 3px 3px yellow;
       font-size: 250%;
-      text-shadow: 2px 2px red;
-
+      
     }
     #movie-input{
       background: rgba(245, 35, 28, 0.315);
@@ -62,6 +88,11 @@
     #bananas{
       position: relative;
        
+    }
+    p {
+      font-size: 20px;
+      word-wrap: normal;
+     
     }
     
     
@@ -87,7 +118,7 @@
     <div id="buttons-view"></div>
 
     <form id="movie-form">
-      <a><button id="add-movie" type="image" src="https://i.gifer.com/1A80.gif" width="20%" height="20%">Add a Movie Here ➪</button></a>
+      <a><button id="add-movie" type="image" src="https://i.gifer.com/1A80.gif" width="20%" height="20%">🔻Add a Movie Here🔻</button></a>
       <input type="text" id="movie-input">
     
       
@@ -102,7 +133,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
-      var movies = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
+      var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "Avengers: Infinity War", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time", "The Empire Strikes Back",];
 
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
