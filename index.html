@@ -136,7 +136,7 @@
     <div id="form-movie">
       <form id="movie-form">
         <label id="input-label" for="movie-input">🔻Enter A Favorite Movie Here🔻</label>
-        <a><button id="add-movie" type="submit">Push To Add</button></a>
+        <button id="add-movie" type="submit">Push To Add</button>
       <input type="text" id="movie-input" autocomplete="off">
       
       
@@ -200,6 +200,14 @@
 
           // Creating an element to have the rating displayed
           var pOne = $("<p>").text("Rating: " + rating);
+          // Retrieving the URL for the image
+          var imgURL = response.Poster;
+
+          // Creating an element to hold the image
+          var image = $("<img>").attr("src", imgURL);
+
+          // Appending the image
+          movieDiv.append(image);
 
           // Displaying the rating
           movieDiv.append(pOne);
@@ -224,14 +232,6 @@
           // Appending the plot
           movieDiv.append(pThree);
 
-          // Retrieving the URL for the image
-          var imgURL = response.Poster;
-
-          // Creating an element to hold the image
-          var image = $("<img>").attr("src", imgURL);
-
-          // Appending the image
-          movieDiv.append(image);
 
           // Putting the entire movie above the previous movies
           $("#movies-view").prepend(movieDiv);
