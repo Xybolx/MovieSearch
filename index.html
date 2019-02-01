@@ -68,7 +68,7 @@
       background-size: contain;
       color: rgb(10, 10, 10);
       text-shadow: 2px 2px 3px yellow;
-      font-size: 250%;
+      font-size: 60px;
     }
 
     #add-movie{
@@ -76,12 +76,12 @@
       background-size: contain;
       color: black;
       text-shadow: 3px 3px 3px yellow;
-      font-size: 250%;
+      /* font-size: 250%; */
       
     }
     #movie-input{
       background: rgba(245, 35, 28, 0.315);
-      font-size: 250%;
+      font-size: 60px;
       color: yellow
       
       
@@ -98,7 +98,7 @@
 
     #input-label{
       display:block;
-      font-size: 150%;
+      /* font-size: 150%; */
     }
 
 
@@ -136,16 +136,16 @@
     <div id="form-movie">
       <form id="movie-form">
         <label id="input-label" for="movie-input">🔻Enter A Favorite Movie Here🔻</label>
-        <button id="add-movie" type="submit">Push To Add</button>
-      <input type="text" id="movie-input" autocomplete="off">
-      
-      
-      
-      <!-- Button triggers new movie to be added -->
-      <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
-    </form>
-  </div>
-
+        <input type="text" id="movie-input" autocomplete="off">
+        
+        
+        
+        <!-- Button triggers new movie to be added -->
+        <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
+      </form>
+    </div>
+    <a><button id="add-movie" type="submit">Push To Add</button></a>
+    
     <!-- Movies will Get Dumped Here -->
     <div id="movies-view"></div>
 
@@ -265,7 +265,7 @@
 
       // This function handles events where a movie button is clicked
       $("#add-movie").on("click", function(event) {
-        // event.preventDefault();
+        event.preventDefault();
         // This line grabs the input from the textbox
         var movie = $("#movie-input").val().trim();
 
@@ -287,7 +287,7 @@
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
-        $("#movie-input").empty();
+        $("#movie-input").val("");
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
@@ -298,15 +298,15 @@
       var initial = db.ref('new');
       
       
-      initial.on('value', function(snapshot) { 
+      initial.on('child_added', function(snapshot) { 
       snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       console.log(childData);
-      var newMovie = Object.values(childData);
-      console.log(newMovie);
-      var newMovie1 = newMovie.toString();
-      console.log(newMovie1);
-      movies.push(newMovie1);
+      // var newMovie = Object.values(childData);
+      // console.log(newMovie);
+      // var newMovie1 = newMovie.toString();
+      // console.log(newMovie1);
+      movies.push(childData);
       console.log(movies);
       renderButtons();
       });
