@@ -131,10 +131,36 @@
     <div id="movies-view"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <script type="text/javascript">
+    
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDNtaAxEQcq6LZ8pNda899G4we-el-mn6k",
+    authDomain: "favorite-movies-3575b.firebaseapp.com",
+    databaseURL: "https://favorite-movies-3575b.firebaseio.com",
+    projectId: "favorite-movies-3575b",
+    storageBucket: "favorite-movies-3575b.appspot.com",
+    messagingSenderId: "142859031042"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.database();
+
+  // $( document ).ready(function() {
+    
+
+// });  
+    
+  
+    
+
+
+
       // Initial array of movies
       var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "Avengers: Infinity War", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time", "The Empire Strikes Back",];
 
+     
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
 
@@ -225,7 +251,20 @@
         var movie = $("#movie-input").val().trim();
 
         // Adding movie from the textbox to our array
+
+        db.ref("/new").push({
+          movie: movie
+        });
+
+        
         movies.push(movie);
+
+        db.ref("/initial").update({
+          movies
+        });
+
+
+
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
@@ -237,6 +276,21 @@
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
+      var initial = db.ref('new');
+      
+      
+      initial.on('value', function(snapshot) { 
+      snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+      console.log(childData);
+      var newMovie = Object.values(childData);
+      console.log(newMovie);
+      movies.push(newMovie);
+      console.log(movies);
+      renderButtons();
+      });
+      
+    });
     </script>
   </div>
 </body>
