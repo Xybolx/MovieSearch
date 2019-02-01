@@ -80,16 +80,9 @@
       
     }
     #movie-input{
+      background: rgba(245, 35, 28, 0.315);
       font-size: 250%;
-      color: yellow;
-      text-shadow: 2px 2px 3px red;
-      width: auto;
-      background: url("images/black-strip.png");
-      background-size: contain;
-      background-repeat: round;
-      background-position-y: center;
-      padding: 40px;
-      border: none;
+      color: yellow
       
       
     }
@@ -106,37 +99,17 @@
     #input-label{
       display:block;
       font-size: 150%;
-      color: yellow;
-      text-shadow: 2px 2px 3px red;
-      background: url("images/black-strip.png");
-      background-size: contain;
-      background-repeat: round;
-
-
     }
 
 
     #movie-form{
       text-align: center;
-      background: black;
-      background-clip: content-box;
-      padding-right: 40px;
-      padding-left: 40px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      /* background: white; */
+      padding: 30px;
+      
     }
 
     #form-movie{
-      background: url("images/marq3.gif");
-      background-clip: content-box;
-      background-size: cover;
-      background-repeat: round;
-      text-align: center;
-    }
-
-
-    #buttons-view{
-      border-bottom: solid 8px whitesmoke;
     }
     
     
@@ -160,19 +133,19 @@
 
     <!-- Rendered Buttons will get Dumped Here  -->
     <div id="buttons-view"></div>
-    <label id="input-label" for="movie-input"> 🔻 Enter A Favorite Movie 🔻 </label>
-    <a><button id="add-movie" type="submit">🔻Push To Add🔻</button></a>
     <div id="form-movie">
-      <form id="movie-form">
-      <input type="text" id="movie-input" autocomplete="off">
+    <form id="movie-form">
+      <label id="input-label" for="movie-input">🔻Enter A Favorite Movie Here🔻</label>
+      <input type="text" id="movie-input">
+      <a><button id="add-movie" type="submit">Push To Add</button></a>
+    
       
-      
-      
+
       <!-- Button triggers new movie to be added -->
       <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
     </form>
-  </div>
-  
+    </div>
+
     <!-- Movies will Get Dumped Here -->
     <div id="movies-view"></div>
 
