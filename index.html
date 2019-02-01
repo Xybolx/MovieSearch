@@ -246,7 +246,7 @@
 
       // This function handles events where a movie button is clicked
       $("#add-movie").on("click", function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         // This line grabs the input from the textbox
         var movie = $("#movie-input").val().trim();
 
@@ -257,11 +257,11 @@
         });
 
         
-        movies.push(movie);
+        // movies.push(movie);
 
-        db.ref("/initial").update({
-          movies
-        });
+        // db.ref("/initial").update({
+        //   movies
+        // });
 
 
 
@@ -275,7 +275,7 @@
       $(document).on("click", ".movie-btn", displayMovieInfo);
 
       // Calling the renderButtons function to display the intial buttons
-      renderButtons();
+      // renderButtons();
       var initial = db.ref('new');
       
       
@@ -285,7 +285,9 @@
       console.log(childData);
       var newMovie = Object.values(childData);
       console.log(newMovie);
-      movies.push(newMovie);
+      var newMovie1 = newMovie.toString();
+      console.log(newMovie1);
+      movies.push(newMovie1);
       console.log(movies);
       renderButtons();
       });
