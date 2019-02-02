@@ -118,12 +118,12 @@
     }
 
     .sign{
-      background: url("images/marq5.png"), white;
-      background-blend-mode: normal;
-      background-size: cover;
+      background: url("images/black-strip.png");
+      background-size: contain;
       background-position-x: center;
       background-position-y: center;
       background-clip: content-box;
+      margin-bottom: 50px;
       
 
     }
@@ -145,7 +145,7 @@
 <body>
 
   <div class="container">
-    <h1>Movie Search</h1>
+    <div class="sign"><h1> MOVIE<br>FAVORITES </h1></div>
 
     <!-- Rendered Buttons will get Dumped Here  -->
     <div id="buttons-view"></div>
@@ -164,7 +164,7 @@
       </div>
     </div>
 
-    <div class="sign"><h1>NOW SHOWING</h1></div>
+    <div class="sign"><h1> NOW<br>SHOWING </h1></div>
     
     <!-- Movies will Get Dumped Here -->
     <div id="movies-view"></div>
@@ -224,7 +224,7 @@
           var imgURL = response.Poster;
 
           // Creating an element to hold the image
-          var image = $("<img>").attr("src", imgURL);
+          var image = $("<img>").attr("src", imgURL,);
 
           // Appending the image
           movieDiv.append(image);
