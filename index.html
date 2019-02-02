@@ -17,22 +17,23 @@
   h1 {
     font-style:oblique;
     font-size: 60px;
-    background: url("images/marquee.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("images/marq5.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: top;
     text-align: center;
     margin: auto;
     width: 700px;
-    height: 100px;
+    height: auto;
     color: black;
+    padding: 40px;
     text-shadow: 3px 3px 3px yellow;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 
   }
-  @-webkit-keyframes glow {
+  @keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
   }
@@ -41,10 +42,10 @@
   }
 }
     button,
-    div,
     form,
-    input {
-      margin: 20px;
+    input,
+    div {
+      margin: 10px;
       text-shadow: 2px 2px  red;
       font-family: 'Limelight', cursive;
       text-align: center;
@@ -69,6 +70,8 @@
       color: rgb(10, 10, 10);
       text-shadow: 2px 2px 3px yellow;
       font-size: 60px;
+      /* display: block; */
+      text-align: center;
     }
 
     #add-movie{
@@ -109,7 +112,21 @@
       
     }
 
-    
+    #form-movie{
+      border-top: solid 8px whitesmoke;
+      border-bottom: solid 8px whitesmoke;
+    }
+
+    .sign{
+      background: url("images/marq5.png"), white;
+      background-blend-mode: normal;
+      background-size: cover;
+      background-position-x: center;
+      background-position-y: center;
+      background-clip: content-box;
+      
+
+    }
     
     
 
@@ -134,20 +151,20 @@
     <div id="buttons-view"></div>
     <div id="form-movie">
       <form id="movie-form">
-        <label id="input-label" for="movie-input">🔻Enter A Favorite Movie Here🔻</label>
+        <label id="input-label" for="movie-input">🔻Enter A Movie Here🔻</label>
         <input type="text" id="movie-input" autocomplete="off">
         
         
         
         <!-- Button triggers new movie to be added -->
         <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
+        <a><button id="add-movie" type="submit">Push To Add</button></a>
       </form>
       <div>
-      <a><button id="add-movie" type="submit">Push To Add</button></a>
       </div>
     </div>
 
-    <h1>NOW SHOWING</h1>
+    <div class="sign"><h1>NOW SHOWING</h1></div>
     
     <!-- Movies will Get Dumped Here -->
     <div id="movies-view"></div>
