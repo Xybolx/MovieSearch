@@ -5,66 +5,74 @@
   <meta charset="utf-8">
   <title>Favorite Movies</title>
   <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Limelight&subset=latin-ext');
-  .container {
-    background-image: url("images/grain.gif"), url("images/clap.jpg");
-    background-blend-mode: multiply, screen; 
-    background-repeat: round;
-    background-attachment: fixed;
-    background-size: contain;
-    font-size: 25px;
-  }
-  h1 {
-    font-style:oblique;
-    font-size: 60px;
-    background: url("images/marq5.png");
-    background-repeat: repeat-y;
-    background-size: contain;
-    background-position: top;
-    text-align: center;
-    margin: auto;
-    width: 700px;
-    height: auto;
-    color: black;
-    padding: 40px;
-    text-shadow: 3px 3px 3px yellow;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+    @import url('https://fonts.googleapis.com/css?family=Limelight&subset=latin-ext');
+    @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
-  }
-  @keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px tomato, 0 0 40px tomato, 0 0 50px tomato, 0 0 60px tomato, 0 0 70px tomato, 0 0 80px tomato;
-  }
-}
+    .container {
+      background-image: url("images/grain.gif"), url("images/clap.jpg");
+      background-blend-mode: multiply, screen;
+      background-repeat: round;
+      background-attachment: fixed;
+      background-size: contain;
+      font-size: 25px;
+    }
+
+    h1 {
+      font-style: oblique;
+      font-size: 60px;
+      background: url("images/marq5.png");
+      background-repeat: repeat-y;
+      background-size: contain;
+      background-position: top;
+      text-align: center;
+      margin: auto;
+      width: 700px;
+      height: auto;
+      color: black;
+      padding: 40px;
+      text-shadow: 3px 3px 3px yellow;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px transparent, 0 0 40px transparent;
+      }
+    }
+
     button,
     form,
     input,
     div {
       margin: 10px;
-      text-shadow: 2px 2px  red;
+      text-shadow: 2px 2px 2px yellow;
       font-family: 'Limelight', cursive;
       text-align: center;
-      
-      
+
+
     }
-    body{
+
+    body {
       background-image: url("images/grain.gif");
       /* background-blend-mode: multiply, screen;  */
       background-repeat: no-repeat;
       background-size: cover;
       /* background-attachment: static; */
-      color:yellow;
-      text-shadow: 2px 2px tomato;
+      color: black;
+      text-shadow: 2px 2px yellow;
       font-family: 'Limelight', cursive;
 
-      
+
     }
-    button{
+
+    button {
       background: url("images/copper.jpg");
       background-size: contain;
       color: rgb(10, 10, 10);
@@ -74,266 +82,323 @@
       text-align: center;
     }
 
-    #add-movie{
+    #add-movie {
       background: url("images/copper.jpg");
       background-size: contain;
       color: black;
       text-shadow: 3px 3px 3px yellow;
       /* font-size: 250%; */
-      
+
     }
-    #movie-input{
-      background: rgba(245, 35, 28, 0.315);
+
+    #movie-input {
+      background: brown;
       font-size: 60px;
       color: yellow;
-      
-      
+      display: inline;
+
+
     }
-    #bananas{
+
+    #bananas {
       position: relative;
-       
+
     }
-    p {
+
+    .info {
       font-size: 20px;
+      padding: 40px;
+      text-align: center;
       word-wrap: normal;
-     
+
     }
 
-    #input-label{
-      display:block;
+    #input-label {
+      display: block;
       /* font-size: 150%; */
+      color: yellow;
+      text-shadow: 1px 1px 1px red;
     }
 
 
-    #movie-form{
+    #movie-form {
       text-align: center;
       /* background: white; */
       padding: 20px;
-      
+
     }
 
-    #form-movie{
-      border-top: solid 8px whitesmoke;
-      border-bottom: solid 8px whitesmoke;
-    }
 
-    .sign{
+    .sign {
       background: url("images/black-strip.png");
       background-size: contain;
       background-position-x: center;
       background-position-y: center;
       background-clip: content-box;
       margin-bottom: 50px;
-      
+
 
     }
-    
-    
 
-      
-    
+    /* p{
+      margin: 5px;
+    } */
 
-    
-      
-      
+    #details {
+      /* background: url("images/marq5.png");
+      background-position: center;
+      background-size: 100% 100%;
+      background-clip: padding-box; */
+      background: url("images/marq3.gif"), black;
+      background-blend-mode: multiply screen;
+      background-clip: border-box;
+      background-size: 100% 100%;
+      color: white;
+
+    }
+
+    .poster {
+      padding: 40px;
+      /* background: url("images/marq5.png");
+      background-position: center;
+      background-size: 100% 100%;
+      background-clip: border-box; */
+      background: url("images/marq3.gif"), black;
+      background-blend-mode: multiply screen;
+      background-clip: padding-box;
+      background-size: contain;
+
+    }
+
+    p {
+      /* border-top: solid; */
+      /* border-bottom: solid; */
+      /* background: url("images/marq3.gif"), white;
+      background-blend-mode: multiply screen;
+      background-clip: border-box;
+      background-size: 100% 100%; */
+    }
 
 
-      
+    .title{
+      background: url("images/marq3.gif"), white;
+      background-blend-mode: multiply screen;
+      background-clip: border-box;
+      background-size: 100% 100%;
+      text-transform: uppercase;
+    }
+
   </style>
 </head>
 
 <body>
 
   <div class="container">
-    <div class="sign"><h1> MOVIE<br>FAVORITES </h1></div>
+    <div class="sign">
+      <h1> FAVORITE<br>MOVIES </h1>
+    </div>
 
     <!-- Rendered Buttons will get Dumped Here  -->
     <div id="buttons-view"></div>
-    <div id="form-movie">
-      <form id="movie-form">
-        <label id="input-label" for="movie-input">🔻Enter A Movie Here🔻</label>
-        <input type="text" id="movie-input" autocomplete="off">
-        
-        
-        
-        <!-- Button triggers new movie to be added -->
-        <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
-        <a><button id="add-movie" type="submit">Push To Add</button></a>
-      </form>
-      <div>
+    <div class="container">
+      <div class="sign">
+        <h1> ADD<br>MOVIES </h1>
       </div>
-    </div>
-
-    <div class="sign"><h1> NOW<br>SHOWING </h1></div>
-    
-    <!-- Movies will Get Dumped Here -->
-    <div id="movies-view"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    <script type="text/javascript">
-    
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDNtaAxEQcq6LZ8pNda899G4we-el-mn6k",
-    authDomain: "favorite-movies-3575b.firebaseapp.com",
-    databaseURL: "https://favorite-movies-3575b.firebaseio.com",
-    projectId: "favorite-movies-3575b",
-    storageBucket: "favorite-movies-3575b.appspot.com",
-    messagingSenderId: "142859031042"
-  };
-  firebase.initializeApp(config);
-  var db = firebase.database();
-
-  // $( document ).ready(function() {
-    
-
-// });  
-    
-  
-    
+      <div id="form-movie">
+        <form id="movie-form">
+          <label id="input-label" for="movie-input">Enter Movie Here</label>
+          <input type="text" id="movie-input" autocomplete="off">
 
 
 
-      // Initial array of movies
-      var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "Avengers: Infinity War", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time", "The Empire Strikes Back",];
+          <!-- Button triggers new movie to be added -->
+          <!-- <input id="add-movie" type="submit" value="Add a Movie"> -->
+          <a><button id="add-movie" type="submit">Push To Add</button></a>
+        </form>
+        <div>
+        </div>
+      </div>
 
-     
-      // displayMovieInfo function re-renders the HTML to display the appropriate content
-      function displayMovieInfo() {
+      <div class="sign">
+        <h1> NOW<br>SHOWING </h1>
+      </div>
 
-        var movie = $(this).attr("data-name");
-        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+      <!-- Movies will Get Dumped Here -->
+      <div id="movies-view">
 
-        // Creating an AJAX call for the specific movie button being clicked
-        $.ajax({
-          url: queryURL,
-          method: "GET"
-        }).then(function(response) {
+      </div>
 
-          // Creating a div to hold the movie
-          var movieDiv = $("<div class='movie'>");
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+      <script type="text/javascript">
 
-          // Storing the rating data
-          var rating = response.Rated;
 
-          // Creating an element to have the rating displayed
-          var pOne = $("<p>").text("Rating: " + rating);
-          // Retrieving the URL for the image
-          var imgURL = response.Poster;
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDNtaAxEQcq6LZ8pNda899G4we-el-mn6k",
+          authDomain: "favorite-movies-3575b.firebaseapp.com",
+          databaseURL: "https://favorite-movies-3575b.firebaseio.com",
+          projectId: "favorite-movies-3575b",
+          storageBucket: "favorite-movies-3575b.appspot.com",
+          messagingSenderId: "142859031042"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.database();
 
-          // Creating an element to hold the image
-          var image = $("<img>").attr("src", imgURL,);
+        // $( document ).ready(function() {
 
-          // Appending the image
-          movieDiv.append(image);
 
-          // Displaying the rating
-          movieDiv.append(pOne);
-
-          // Storing the release year
-          var released = response.Released;
-
-          // Creating an element to hold the release year
-          var pTwo = $("<p>").text("Released: " + released);
-
-          // Displaying the release year
-          movieDiv.append(pTwo);
-
-          // Storing the plot
-          var plot = response.Plot;
+        // });  
 
 
 
-          // Creating an element to hold the plot
-          var pThree = $("<p>").text("Plot: " + plot);
-
-          // Appending the plot
-          movieDiv.append(pThree);
 
 
-          // Putting the entire movie above the previous movies
-          $("#movies-view").prepend(movieDiv);
-        });
 
-      }
+        // Initial array of movies
+        var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "Avengers: Infinity War", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time", "The Empire Strikes Back",];
 
-      // Function for displaying movie data
-      function renderButtons() {
 
-        // Deleting the movies prior to adding new movies
-        // (this is necessary otherwise you will have repeat buttons)
-        $("#buttons-view").empty();
+        // displayMovieInfo function re-renders the HTML to display the appropriate content
+        function displayMovieInfo() {
 
-        // Looping through the array of movies
-        for (var i = 0; i < movies.length; i++) {
+          var movie = $(this).attr("data-name");
+          var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
 
-          // Then dynamicaly generating buttons for each movie in the array
-          // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-          var a = $("<button>");
-          // Adding a class of movie-btn to our button
-          a.addClass("movie-btn");
-          // Adding a data-attribute
-          a.attr("data-name", movies[i]);
-          // Providing the initial button text
-          a.text(movies[i]);
-          // Adding the button to the buttons-view div
-          $("#buttons-view").append(a);
+          // Creating an AJAX call for the specific movie button being clicked
+          $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).then(function (response) {
+
+            // Creating a div to hold the movie
+            var movieDiv = $("<div class='movie'>");
+
+            // Creating divs to hold the info
+            var detailsDiv = $("<div class='info'>");
+            var infoDiv = $("<div id='details'>");
+
+            // Storing the rating data
+            var rating = response.Rated;
+
+            // Creating an element to have the title displayed
+            var title = $("<h1 class='title'>").html(movie);
+
+            // Creating an element to have the rating displayed
+            var pOne = $("<p>").html("Rated: " + "<br>" + rating);
+
+            // Retrieving the URL for the image
+            var imgURL = response.Poster;
+
+            // Creating an element to hold the image
+            var image = $("<img class='poster'>").attr("src", imgURL);
+
+            // Appending the image
+            movieDiv.append(image);
+
+            // Appending the title
+            movieDiv.append(title);
+
+            // Displaying the rating
+            detailsDiv.append(pOne);
+
+            // Storing the release year
+            var released = response.Released;
+
+            // Creating an element to hold the release year
+            var pTwo = $("<p>").html("Released: " + "<br>" + released);
+
+            // Displaying the release year
+            detailsDiv.append(pTwo);
+
+            // Storing the plot
+            var plot = response.Plot;
+
+            // Creating an element to hold the plot
+            var pThree = $("<p>").html("Plot: " + "<br>" + plot);
+
+            // Appending the plot
+            detailsDiv.append(pThree);
+
+            // Appending the details to the info div
+            infoDiv.append(detailsDiv);
+
+            // Appending the info to the movie div
+            movieDiv.append(infoDiv);
+
+
+            // Putting the entire movie above the previous movies
+            $("#movies-view").prepend(movieDiv);
+          });
+
         }
-      }
 
-      // This function handles events where a movie button is clicked
-      $("#add-movie").on("click", function(event) {
-        event.preventDefault();
-        // This line grabs the input from the textbox
-        var movie = $("#movie-input").val().trim();
+        // Function for displaying movie data
+        function renderButtons() {
 
-        // Adding movie from the textbox to our array
+          // Deleting the movies prior to adding new movies
+          // (this is necessary otherwise you will have repeat buttons)
+          $("#buttons-view").empty();
 
-        db.ref("/new").push({
-          movie: movie
+          // Looping through the array of movies
+          for (var i = 0; i < movies.length; i++) {
+
+            // Then dynamicaly generating buttons for each movie in the array
+            var a = $("<button>");
+            // Adding a class of movie-btn to our button
+            a.addClass("movie-btn");
+            // Adding a data-attribute
+            a.attr("data-name", movies[i]);
+            // Providing the initial button text
+            a.text(movies[i]);
+            // Adding the button to the buttons-view div
+            $("#buttons-view").append(a);
+          }
+        }
+
+        // This function handles events where a movie button is clicked
+        $("#add-movie").on("click", function (event) {
+          event.preventDefault();
+          // This line grabs the input from the textbox
+          var movie = $("#movie-input").val().trim();
+
+
+          // Adding movie from the textbox to our database
+          db.ref("/new").push({
+            movie: movie
+          });
+
+
+          
+
+
+
+          // Calling renderButtons which handles the processing of our movie array
+          renderButtons();
+          $("#movie-input").val("");
         });
 
-        
-        // movies.push(movie);
+        // Adding a click event listener to all elements with a class of "movie-btn"
+        $(document).on("click", ".movie-btn", displayMovieInfo);
 
-        // db.ref("/initial").update({
-        //   movies
-        // });
-
-
-
-
-        // Calling renderButtons which handles the processing of our movie array
+        // Calling the renderButtons function to display the intial buttons
         renderButtons();
-        $("#movie-input").val("");
-      });
 
-      // Adding a click event listener to all elements with a class of "movie-btn"
-      $(document).on("click", ".movie-btn", displayMovieInfo);
 
-      // Calling the renderButtons function to display the intial buttons
-      renderButtons();
-      var initial = db.ref('new');
-      
-      
-      initial.on('child_added', function(snapshot) { 
-      snapshot.forEach(function(childSnapshot) {
-      var childData = childSnapshot.val();
-      console.log(childData);
-      // var newMovie = Object.values(childData);
-      // console.log(newMovie);
-      // var newMovie1 = newMovie.toString();
-      // console.log(newMovie1);
-      movies.push(childData);
-      console.log(movies);
-      renderButtons();
-      });
-      
-    });
-    </script>
-  </div>
+        // Adding new movies from database to movies array so that adding a movie button is permanent 
+        var initial = db.ref('new');
+        initial.on('child_added', function (snapshot) {
+          snapshot.forEach(function (childSnapshot) {
+            var childData = childSnapshot.val();
+            console.log(childData);
+            movies.push(childData);
+            console.log(movies);
+            renderButtons();
+          });
+
+        });
+      </script>
+    </div>
 </body>
 
 </html>
