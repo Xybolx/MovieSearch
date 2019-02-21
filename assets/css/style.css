@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Limelight&subset=latin-ext');
+    @import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+    .container {
+      background-image: url("../images/grain.gif"), url("../images/clap.jpg");
+      background-blend-mode: multiply, screen;
+      background-repeat: round;
+      background-attachment: fixed;
+      background-size: contain;
+      font-size: 25px;
+    }
+
+    h1 {
+      font-style: oblique;
+      font-size: 60px;
+      background: url("../images/marq5.png");
+      background-repeat: repeat-y;
+      background-size: contain;
+      background-position: top;
+      text-align: center;
+      margin: auto;
+      width: 700px;
+      height: auto;
+      color: black;
+      padding: 40px;
+      text-shadow: 3px 3px 3px yellow;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px transparent, 0 0 40px transparent;
+      }
+    }
+
+    button,
+    form,
+    input,
+    div {
+      margin: 10px;
+      text-shadow: 2px 2px 2px yellow;
+      font-family: 'Limelight', cursive;
+      text-align: center;
+    }
+
+    body {
+      background-image: url("../images/grain.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: black;
+      text-shadow: 2px 2px yellow;
+      font-family: 'Limelight', cursive;
+    }
+
+    button {
+      background: url("../images/copper.jpg");
+      background-size: contain;
+      color: rgb(10, 10, 10);
+      text-shadow: 2px 2px 3px yellow;
+      font-size: 60px;
+      text-align: center;
+    }
+
+    #add-movie {
+      background: url("../images/copper.jpg");
+      background-size: contain;
+      color: black;
+      text-shadow: 3px 3px 3px yellow;
+    }
+
+    #movie-input {
+      background: brown;
+      font-size: 60px;
+      color: yellow;
+      display: inline;
+    }
+
+    .info {
+      font-size: 20px;
+      padding: 40px;
+      text-align: center;
+      word-wrap: normal;
+    }
+
+    #input-label {
+      display: block;
+      color: yellow;
+      text-shadow: 1px 1px 1px red;
+    }
+
+    #movie-form {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sign {
+      background: url("../images/black-strip.png");
+      background-size: contain;
+      background-position-x: center;
+      background-position-y: center;
+      background-clip: content-box;
+      margin-bottom: 50px;
+    }
+
+    #details {
+      color: white;
+    }
+
+    .poster {
+      padding: 10px;
+      background: url("../images/marq3.gif"), black;
+      background-blend-mode: multiply screen;
+      background-clip: padding-box;
+      background-size: contain;
+
+    }
+
+    .title {
+      background: url("../images/marq3.gif"), white;
+      background-blend-mode: multiply screen;
+      background-clip: border-box;
+      background-size: 100% 100%;
+      text-transform: uppercase;
+    }
