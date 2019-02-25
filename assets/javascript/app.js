@@ -18,7 +18,7 @@ var config = {
 
 
   // Initial array of movies
-  var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "Avengers: Infinity War", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time", "The Empire Strikes Back",];
+  var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time"];
 
 
   // displayMovieInfo function re-renders the HTML to display the appropriate content
@@ -130,13 +130,6 @@ var config = {
       movie: movie
     });
 
-
-    
-
-
-
-    // Calling renderButtons which handles the processing of our movie array
-    renderButtons();
     $("#movie-input").val("");
   });
 

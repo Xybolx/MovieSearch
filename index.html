@@ -4,50 +4,49 @@
 <head>
   <meta charset="utf-8">
   <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="jumbotron jumbotron-fluid">
     <div class="sign">
       <h1> FAVORITE<br>MOVIES </h1>
     </div>
-
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
     <div class="container">
+      <!-- Rendered Buttons will get Dumped Here  -->
+      <div id="buttons-view"></div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
       <div class="sign">
         <h1> ADD<br>MOVIES </h1>
       </div>
-      <div id="form-movie">
-        <form id="movie-form">
-          <label id="input-label" for="movie-input">Enter Movie Here</label>
-          <input type="text" id="movie-input" autocomplete="off">
-
-
-
-          <!-- Button triggers new movie to be added -->
-          <a><button id="add-movie" type="submit">Push To Add</button></a>
-        </form>
-        <div>
+      <div class="container">
+        <div id="form-movie">
+          <form id="movie-form">
+            <label id="input-label" for="movie-input">Enter Movie Here</label>
+            <input type="text" id="movie-input" autocomplete="off">
+            <!-- Button triggers new movie to be added -->
+            <a><button id="add-movie" type="submit">Push To Add</button></a>
+          </form>
         </div>
       </div>
-
-      <div class="sign">
-        <h1> NOW<br>SHOWING </h1>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="sign">
+          <h1> NOW<br>SHOWING </h1>
+        </div>
+        <div class="container">
+          <!-- Movies will Get Dumped Here -->
+          <div id="movies-view"></div>
+        </div>
       </div>
-
-      <!-- Movies will Get Dumped Here -->
-      <div id="movies-view">
-
-      </div>
-
-      
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    <script src="assets/javascript/app.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

@@ -2,11 +2,6 @@
     @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
     .container {
-      background-image: url("../images/grain.gif"), url("../images/clap.jpg");
-      background-blend-mode: multiply, screen;
-      background-repeat: round;
-      background-attachment: fixed;
-      background-size: contain;
       font-size: 25px;
     }
 
@@ -31,18 +26,17 @@
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
       }
 
       to {
-        text-shadow: 0 0 20px #fff, 0 0 30px transparent, 0 0 40px transparent;
+        text-shadow: 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
       }
     }
 
     button,
     form,
-    input,
-    div {
+    input {
       margin: 10px;
       text-shadow: 2px 2px 2px yellow;
       font-family: 'Limelight', cursive;
@@ -50,9 +44,10 @@
     }
 
     body {
-      background-image: url("../images/grain.gif");
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url("../images/clap.jpg");
+      background-repeat: round;
+      background-attachment: fixed;
+      background-size: contain;
       color: black;
       text-shadow: 2px 2px yellow;
       font-family: 'Limelight', cursive;
@@ -63,8 +58,10 @@
       background-size: contain;
       color: rgb(10, 10, 10);
       text-shadow: 2px 2px 3px yellow;
-      font-size: 60px;
+      text-transform: capitalize;
+      font-size: 40px;
       text-align: center;
+      cursor: pointer;
     }
 
     #add-movie {
@@ -111,7 +108,12 @@
     }
 
     #details {
-      color: white;
+      color: yellow;
+      font-size: 30px;
+      text-shadow: 2px 2px 1px red;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 30px;
     }
 
     .poster {
@@ -120,7 +122,8 @@
       background-blend-mode: multiply screen;
       background-clip: padding-box;
       background-size: contain;
-
+      max-height: 500px;
+      min-height: 400px;
     }
 
     .title {
@@ -128,5 +131,18 @@
       background-blend-mode: multiply screen;
       background-clip: border-box;
       background-size: 100% 100%;
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
+
+    #buttons-view {
+      text-align: center;
+    }
+
+    #movies-view {
+      text-align: center;
+    }
+
+    .jumbotron {
+      background: transparent;
+    }
+
