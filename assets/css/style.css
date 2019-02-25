@@ -78,6 +78,8 @@
       background: brown;
       font-size: 60px;
       color: yellow;
+      text-shadow: 3px 3px 3px red;
+      text-transform: capitalize;
       display: inline;
     }
 
