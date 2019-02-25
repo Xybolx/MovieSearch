@@ -143,9 +143,6 @@ var config = {
   // Adding a click event listener to all elements with a class of "movie-btn"
   $(document).on("click", ".movie-btn", displayMovieInfo);
 
-  // Calling the renderButtons function to display the intial buttons
-  renderButtons();
-
 
   // Adding new movies from database to movies array so that adding a movie button is permanent 
   var initial = db.ref('/new');
