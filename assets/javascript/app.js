@@ -20,6 +20,8 @@ var config = {
   // Initial array of movies
   var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time"];
 
+  $("#add-movie").hide();
+
 
   // displayMovieInfo function re-renders the HTML to display the appropriate content
   function displayMovieInfo() {
@@ -131,7 +133,27 @@ var config = {
     });
 
     $("#movie-input").val("");
+    $("#add-movie").hide();
   });
+
+  $('#movie-input').on('input', function () {
+    var input = $(this);
+    var re = /^[^\s]+(\s+[^\s]+)*$/;
+    var is_movie = re.test(input.val());
+    if (is_movie) {
+        input.removeClass("invalid").addClass("valid");
+        $("#add-movie").show();
+        
+      }
+    else {
+        input.removeClass("valid").addClass("invalid");
+        $("#add-movie").hide();
+    
+    
+}
+
+});
+
 
   // Adding a click event listener to all elements with a class of "movie-btn"
   $(document).on("click", ".movie-btn", displayMovieInfo);
