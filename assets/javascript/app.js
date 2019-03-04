@@ -20,7 +20,8 @@ var config = {
   // Initial array of movies
   var movies = ["The Matrix", "Inception", "Mr. Nobody", "Star Wars", "Lost Highway", "Primer", "Upstream Color", "The Dark Knight", "The Toxic Avenger", "Inland Empire", "Donnie Darko", "American Psycho", "Fight Club", "Pulp Fiction", "In Time"];
 
-  $("#add-movie").hide();
+  // Make the add movie submit button disabled on load
+  $("#add-movie").prop("disabled", true);
 
 
   // displayMovieInfo function re-renders the HTML to display the appropriate content
@@ -35,6 +36,8 @@ var config = {
       method: "GET"
     }).then(function (response) {
 
+      console.log(response);
+
       // Creating a div to hold the movie
       var movieDiv = $("<div class='movie'>");
 
@@ -43,13 +46,25 @@ var config = {
       var infoDiv = $("<div id='details'>");
 
       // Storing the rating data
-      var rating = response.Rated;
+      var rating = response.Rated
+
+      // Storing the Rotten Tomatoes rating
+      var tomatoRating = (Object.values(response.Ratings[1]))[1];
+
+      // Storing imdb rating
+      var imdbRated = response.imdbRating;
 
       // Creating an element to have the title displayed
       var title = $("<h1 class='title'>").html(movie);
 
       // Creating an element to have the rating displayed
-      var pOne = $("<p>").html("Rated: " + "<br>" + rating);
+      var pZero = $("<h2>").html("<h2>" + "Rated:" + "</h2>" + "<p>" + rating + "</p>");
+
+      // Creating an element to have the Rotten Tomatoes rating displayed
+      var pOne = $("<h2>").html("<h2>" + "Rotten Tomatoes:" + "</h2>" + "<p>" + tomatoRating + "</p>");
+
+      // Creating an element to have the imdb rating displayed 
+      var pTwo = $("<h2>").html("<h2>" + "imdb Rating:" + "</h2>" + "<p>" + imdbRated + "/10" + "</p>");
 
       // Retrieving the URL for the image
       var imgURL = response.Poster;
@@ -64,25 +79,31 @@ var config = {
       movieDiv.append(title);
 
       // Displaying the rating
+      detailsDiv.append(pZero);
+
+      // Displaying the Rotten Tomatoes rating
       detailsDiv.append(pOne);
+
+      // Displaying the imdb rating
+      detailsDiv.append(pTwo);
 
       // Storing the release year
       var released = response.Released;
 
       // Creating an element to hold the release year
-      var pTwo = $("<p>").html("Released: " + "<br>" + released);
+      var pThree = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
 
       // Displaying the release year
-      detailsDiv.append(pTwo);
+      detailsDiv.append(pThree);
 
       // Storing the plot
       var plot = response.Plot;
 
       // Creating an element to hold the plot
-      var pThree = $("<p>").html("Plot: " + "<br>" + plot);
+      var pFour = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
 
       // Appending the plot
-      detailsDiv.append(pThree);
+      detailsDiv.append(pFour);
 
       // Appending the details to the info div
       infoDiv.append(detailsDiv);
@@ -126,14 +147,13 @@ var config = {
     // This line grabs the input from the textbox
     var movie = $("#movie-input").val().trim();
 
-
-    // Adding movie from the textbox to our database
+  // Adding movie from the textbox to our database
     db.ref("/new").push({
       movie: movie
     });
 
     $("#movie-input").val("");
-    $("#add-movie").hide();
+    $("#add-movie").prop("disabled", true);
   });
 
   $('#movie-input').on('input', function () {
@@ -142,12 +162,11 @@ var config = {
     var is_movie = re.test(input.val());
     if (is_movie) {
         input.removeClass("invalid").addClass("valid");
-        $("#add-movie").show();
-        
+        $("#add-movie").prop("disabled", false);
       }
     else {
         input.removeClass("valid").addClass("invalid");
-        $("#add-movie").hide();
+        $("#add-movie").prop("disabled", true);
     
     
 }

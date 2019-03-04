@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight&subset=latin-ext');
-    @import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
     .container {
       font-size: 25px;
@@ -34,6 +34,17 @@
       }
     }
 
+    @keyframes flash {
+      from {
+        outline: solid transparent;
+      }
+
+      to {
+        outline: solid yellow;
+      }
+    }
+
+    
     button,
     form,
     input {
@@ -42,7 +53,7 @@
       font-family: 'Limelight', cursive;
       text-align: center;
     }
-
+    
     body {
       background-image: url("../images/clap.jpg");
       background-repeat: round;
@@ -52,7 +63,7 @@
       text-shadow: 2px 2px yellow;
       font-family: 'Limelight', cursive;
     }
-
+    
     button {
       background: url("../images/copper.jpg");
       background-size: contain;
@@ -63,7 +74,7 @@
       text-align: center;
       cursor: pointer;
     }
-
+    
     #add-movie {
       background: url("../images/copper.jpg");
       background-size: contain;
@@ -72,33 +83,47 @@
       display: inline-block;
     }
 
+    #add-movie:enabled {
+      -webkit-animation: flash 1s ease-in-out infinite alternate;
+      -moz-animation: flash 1s ease-in-out infinite alternate;
+      animation: flash 1s ease-in-out infinite alternate;
+    }
+    
     #movie-input {
-      background: brown;
+      background: rgb(117, 19, 19);
       font-size: 50px;
       color: yellow;
-      text-shadow: 3px 3px 3px red;
+      text-shadow: 2px 2px 2px red;
       text-transform: capitalize;
       display: inline-block;
     }
+    
+    #movie-input:invalid {
+      border: ridge whitesmoke;
+    }
 
+    #movie-input:valid {
+      border: ridge yellow;
+    }
+    
     .info {
       font-size: 20px;
       padding: 40px;
       text-align: center;
       word-wrap: normal;
     }
-
+    
     #input-label {
       display: block;
       color: yellow;
       text-shadow: 1px 1px 1px red;
     }
-
+    
     #movie-form {
       text-align: center;
       padding: 20px;
     }
-
+    
     .sign {
       background: url("../images/black-strip.png");
       background-size: contain;
@@ -107,7 +132,7 @@
       background-clip: content-box;
       margin-bottom: 50px;
     }
-
+    
     #details {
       color: yellow;
       font-size: 30px;
@@ -115,8 +140,11 @@
       margin-left: 10px;
       margin-right: 10px;
       padding: 30px;
+      background: rgba(0, 0, 0, 0.527);
+      background-size: contain;
+      background-repeat: round;
     }
-
+    
     .poster {
       padding: 10px;
       background: url("../images/marq3.gif"), black;
@@ -126,7 +154,7 @@
       max-height: 500px;
       min-height: 400px;
     }
-
+    
     .title {
       background: url("../images/marq3.gif"), white;
       background-blend-mode: multiply screen;
@@ -134,16 +162,26 @@
       background-size: 100% 100%;
       text-transform: capitalize;
     }
-
+    
     #buttons-view {
       text-align: center;
     }
-
+    
     #movies-view {
       text-align: center;
     }
-
+    
     .jumbotron {
       background: transparent;
     }
+    
+    p {
+      color: white;
+      font-family: "Special Elite", sans-serif;
+      background: rgba(117, 19, 19, 0.459);
+    }
 
+    h2 {
+      background: rgba(0, 0, 0, 0.829);
+    }
+    

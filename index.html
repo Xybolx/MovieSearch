@@ -24,14 +24,12 @@
         <h1> ADD<br>MOVIES </h1>
       </div>
       <div class="container text-center">
-        <!-- <div id="form-movie"> -->
           <form id="movie-form">
             <label id="input-label" for="movie-input">Enter Movie Here</label>
-            <input type="text" id="movie-input" autocomplete="off">
+            <input type="text" id="movie-input" autocomplete="off" required>
             <!-- Button triggers new movie to be added -->
             <a><button id="add-movie" type="submit">Push To Add</button></a>
           </form>
-        <!-- </div> -->
       </div>
       <div class="jumbotron jumbotron-fluid">
         <div class="sign">
@@ -46,6 +44,7 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
   <script src="assets/javascript/app.js"></script>
 </body>
 
