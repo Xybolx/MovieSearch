@@ -57,6 +57,9 @@ var config = {
       // Storing imdb rating
       var imdbRated = response.imdbRating;
 
+      // Storing the actors data
+      var actors = response.Actors;
+
       // Creating an element to have the title displayed
       var title = $("<h1 class='title'>").html(movie);
 
@@ -71,6 +74,9 @@ var config = {
       
       // Creating an element to have the director displayed
       var pThree = $("<h2>").html("<h2>" + "Directed By:" + "</h2>" + "<p>" + director + "</p>");
+
+      // Creating an element to have the actors displayed
+      var pFour = $("<h2>").html("<h2>" + "Starring:" + "</h2>" + "<p>" + actors + "</p>");
 
       // Retrieving the URL for the image
       var imgURL = response.Poster;
@@ -99,29 +105,32 @@ var config = {
       // Storing the release year
       var released = response.Released;
 
-      // Creating an element to hold the release year
-      var pFour = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
+      // Creating an element to hold the release date
+      var pFive = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
 
-      // Displaying the release date
+      // Displaying the actors
       detailsDiv.append(pFour);
 
       // Storing the studio
       var studio = response.Production;
 
       // Creating an element to hold the plot
-      var pFive = $("<h2>").html("<h2>" + "Studio:" + "</h2>" + "<p>" + studio + "</p>");
+      var pSix = $("<h2>").html("<h2>" + "Studio:" + "</h2>" + "<p>" + studio + "</p>");
 
       // Storing the plot
       var plot = response.Plot;
 
       // Creating an element to hold the plot
-      var pSix = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
+      var pSeven = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
 
-      // Appending the studio
+      // Appending the release date
       detailsDiv.append(pFive);
 
-      // Appending the plot
+      // Appending the studio
       detailsDiv.append(pSix);
+
+      // Appending the plot
+      detailsDiv.append(pSeven);
 
       // Appending the details to the info div
       infoDiv.append(detailsDiv);
