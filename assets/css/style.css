@@ -7,7 +7,7 @@
 
     h1 {
       font-style: oblique;
-      font-size: 60px;
+      font-size: 50px;
       background: url("../images/marq5.png");
       background-repeat: repeat-y;
       background-size: contain;
@@ -27,10 +27,12 @@
     @keyframes glow {
       from {
         text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+        color: rgb(14, 12, 0);
       }
 
       to {
         text-shadow: 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
+        color: rgba(88, 79, 16, 0.904);
       }
     }
 
@@ -160,7 +162,8 @@
       background-blend-mode: multiply screen;
       background-clip: border-box;
       background-size: 100% 100%;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      font-size: 45px;
     }
     
     #buttons-view {
