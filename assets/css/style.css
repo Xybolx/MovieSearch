@@ -113,6 +113,8 @@
       padding: 40px;
       text-align: center;
       word-wrap: normal;
+      background: white;
+      border-radius: 5px;
     }
     
     #input-label {
@@ -142,7 +144,7 @@
       margin-left: 10px;
       margin-right: 10px;
       padding: 30px;
-      background: rgba(0, 0, 0, 0.527);
+      background: url("../images/marq3.gif"), transparent;
       background-size: contain;
       background-repeat: round;
     }
@@ -164,6 +166,7 @@
       background-size: 100% 100%;
       text-transform: uppercase;
       font-size: 45px;
+      border-radius: 10px;
     }
     
     #buttons-view {
@@ -179,9 +182,9 @@
     }
     
     p {
-      color: white;
+      color: whitesmoke;
       font-family: "Special Elite", sans-serif;
-      background: rgba(117, 19, 19, 0.459);
+      background: rgba(8, 8, 8, 0.096);
     }
 
     h2 {
