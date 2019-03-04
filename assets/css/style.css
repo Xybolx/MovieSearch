@@ -59,7 +59,7 @@
       color: rgb(10, 10, 10);
       text-shadow: 2px 2px 3px yellow;
       text-transform: capitalize;
-      font-size: 40px;
+      font-size: 45px;
       text-align: center;
       cursor: pointer;
     }
@@ -69,15 +69,16 @@
       background-size: contain;
       color: black;
       text-shadow: 3px 3px 3px yellow;
+      display: inline-block;
     }
 
     #movie-input {
       background: brown;
-      font-size: 60px;
+      font-size: 50px;
       color: yellow;
       text-shadow: 3px 3px 3px red;
       text-transform: capitalize;
-      display: inline;
+      display: inline-block;
     }
 
     .info {
