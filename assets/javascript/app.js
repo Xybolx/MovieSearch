@@ -48,6 +48,9 @@ var config = {
       // Storing the rating data
       var rating = response.Rated
 
+      // Storing the director data
+      var director = response.Director
+
       // Storing the Rotten Tomatoes rating
       var tomatoRating = (Object.values(response.Ratings[1]))[1];
 
@@ -65,6 +68,9 @@ var config = {
 
       // Creating an element to have the imdb rating displayed 
       var pTwo = $("<h2>").html("<h2>" + "imdb Rating:" + "</h2>" + "<p>" + imdbRated + "/10" + "</p>");
+      
+      // Creating an element to have the director displayed
+      var pThree = $("<h2>").html("<h2>" + "Directed By:" + "</h2>" + "<p>" + director + "</p>");
 
       // Retrieving the URL for the image
       var imgURL = response.Poster;
@@ -87,23 +93,26 @@ var config = {
       // Displaying the imdb rating
       detailsDiv.append(pTwo);
 
+       // Displaying the director
+       detailsDiv.append(pThree);
+
       // Storing the release year
       var released = response.Released;
 
       // Creating an element to hold the release year
-      var pThree = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
+      var pFour = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
 
       // Displaying the release year
-      detailsDiv.append(pThree);
+      detailsDiv.append(pFour);
 
       // Storing the plot
       var plot = response.Plot;
 
       // Creating an element to hold the plot
-      var pFour = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
+      var pFive = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
 
       // Appending the plot
-      detailsDiv.append(pFour);
+      detailsDiv.append(pFive);
 
       // Appending the details to the info div
       infoDiv.append(detailsDiv);
