@@ -102,17 +102,26 @@ var config = {
       // Creating an element to hold the release year
       var pFour = $("<h2>").html("<h2>" + "Released:" + "</h2>" + "<p>" + moment(released).format("MMMM Do, YYYY") + "</p>");
 
-      // Displaying the release year
+      // Displaying the release date
       detailsDiv.append(pFour);
+
+      // Storing the studio
+      var studio = response.Production;
+
+      // Creating an element to hold the plot
+      var pFive = $("<h2>").html("<h2>" + "Studio:" + "</h2>" + "<p>" + studio + "</p>");
 
       // Storing the plot
       var plot = response.Plot;
 
       // Creating an element to hold the plot
-      var pFive = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
+      var pSix = $("<h2>").html("<h2>" + "Plot:" + "</h2>" + "<p>" + plot + "</p>");
+
+      // Appending the studio
+      detailsDiv.append(pFive);
 
       // Appending the plot
-      detailsDiv.append(pFive);
+      detailsDiv.append(pSix);
 
       // Appending the details to the info div
       infoDiv.append(detailsDiv);
