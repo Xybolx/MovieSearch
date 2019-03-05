@@ -88,7 +88,7 @@ var config = {
       movieDiv.append(image);
 
       // Appending the title
-      movieDiv.append(title);
+      detailsDiv.append(title);
 
       // Displaying the rating
       detailsDiv.append(pZero);
