@@ -85,7 +85,7 @@ var config = {
       var image = $("<img class='poster'>").attr("src", imgURL);
 
       // Appending the image
-      movieDiv.append(image);
+      detailsDiv.append(image);
 
       // Appending the title
       detailsDiv.append(title);
