@@ -25,13 +25,13 @@
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
-        color: rgb(14, 12, 0);
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 30px yellow;
+        color: rgba(128, 115, 19, 0.904);
       }
 
       to {
-        text-shadow: 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-        color: rgba(88, 79, 16, 0.904);
+        text-shadow: 0 0 20px transparent, 0 0 30px transparent, 0 0 30px transparent;
+        color: rgb(14, 12, 0);
       }
     }
 
