@@ -114,6 +114,7 @@
       background: url("../images/grain.gif");
       background-size: contain;
       border-radius: 20px;
+      padding-top: 30px;
     }
     
     #input-label {
