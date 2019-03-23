@@ -34,7 +34,7 @@ var config = {
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function (response) {
+    }).then( (response) => {
 
       console.log(response);
 
@@ -169,7 +169,7 @@ var config = {
   }
 
   // This function handles events where a movie button is clicked
-  $("#add-movie").on("click", function (event) {
+  $("#add-movie").on("click", (event) => {
     event.preventDefault();
     // This line grabs the input from the textbox
     var movie = $("#movie-input").val().trim();
@@ -183,7 +183,7 @@ var config = {
     $("#add-movie").prop("disabled", true);
   });
 
-  $('#movie-input').on('input', function () {
+  $('#movie-input').on('input', () => {
     var input = $(this);
     var re = /^[^\s]+(\s+[^\s]+)*$/;
     var is_movie = re.test(input.val());
@@ -207,8 +207,8 @@ var config = {
 
   // Adding new movies from database to movies array so that adding a movie button is permanent 
   var initial = db.ref('/new');
-  initial.on('child_added', function (snapshot) {
-    snapshot.forEach(function (childSnapshot) {
+  initial.on('child_added', (snapshot) => {
+    snapshot.forEach( (childSnapshot) => {
       var childData = childSnapshot.val();
       console.log(childData);
       movies.push(childData);
