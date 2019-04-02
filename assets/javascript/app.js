@@ -169,7 +169,7 @@ var config = {
   }
 
   // This function handles events where a movie button is clicked
-  $("#add-movie").on("click", (event) => {
+  $("#add-movie").on("click", function (event){
     event.preventDefault();
     // This line grabs the input from the textbox
     var movie = $("#movie-input").val().trim();
@@ -183,7 +183,7 @@ var config = {
     $("#add-movie").prop("disabled", true);
   });
 
-  $('#movie-input').on('input', () => {
+  $('#movie-input').on('input', function () {
     var input = $(this);
     var re = /^[^\s]+(\s+[^\s]+)*$/;
     var is_movie = re.test(input.val());
